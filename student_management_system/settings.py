@@ -14,7 +14,7 @@ SECRET_KEY = '(i#*06f#keydy_fh17bf=$0f6v)^wr^l7*u4gq42m*sztu#2_m'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.vercel.app','.now.sh']
 
 
 # Application definition
@@ -125,3 +125,7 @@ AUTH_USER_MODEL = "student_management_app.CustomUser"
 
 # Registering Custom Backend "EmailBackEnd"
 AUTHENTICATION_BACKENDS = ['student_management_app.EmailBackEnd.EmailBackEnd']
+
+
+STATICFILIES_DIRS=os.path.join(BASE_DIR,'static'),
+STATIC_ROOT=os.path.join(BASE_DIR,"staticfiles_build","static")
